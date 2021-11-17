@@ -1,0 +1,12 @@
+.content {
+  border: 1px solid chocolate;
+  font-style: italic;
+  font-weight: bolder;
+  width: 400px;
+  text-align: center;
+  padding-top: 28px;
+  background-color: hotpink;
+}
+button {
+  margin: 8px;
+}

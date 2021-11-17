@@ -1,0 +1,15 @@
+<div class="container" mt-4>
+  <button type="button" (click)="toggle()">Toggle</button>
+  <div [@openClose]="isOpen ? 'open' : 'closed'" class="content">
+    <p>The box is {{ isOpen ? "open" : "closed" }}</p>
+  </div>
+  <button type="button" (click)="addRemoveToggle()" *ngIf="!show">
+    Add box
+  </button>
+  <button type="button" (click)="addRemoveToggle()" *ngIf="show">
+    Remove box
+  </button>
+  <div *ngIf="show" [@flyInOut]="show ? 'in' : 'out'" class="content">
+    <p>Box is visible</p>
+  </div>
+</div>

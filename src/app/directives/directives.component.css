@@ -1,0 +1,29 @@
+ul {
+  color: coral;
+  font-size: 18px;
+}
+ol {
+  color: cadetblue;
+}
+.content{
+    border:1px solid chocolate;
+    border-radius: 7px;
+    padding: 5px 5px 0px 5px;
+    background-color: floralwhite;
+}
+p{
+    color:black;
+    font-size: medium;
+}
+.eg1ForNgClass{
+    color:darkgreen
+}
+.eg2ForNgClass{
+    font-style: italic;
+}
+input{
+    border: 1px solid gray;
+    padding:0px;
+    margin-top: 2px;
+    height: 22px;
+}

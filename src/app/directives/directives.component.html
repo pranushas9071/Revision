@@ -1,0 +1,70 @@
+<div class="container mt-4">
+  <h3>BUILT-IN-DIRECTIVES :</h3>
+  <div class="content">
+    <ul>
+      <li>Attribute directives</li>
+      <ol>
+        <li>NgClass</li>
+        <li>NgStyle</li>
+        <li>NgModel</li>
+      </ol>
+      <li>Structural directives</li>
+      <ol>
+        <li>NgIf</li>
+        <li>NgFor</li>
+        <li>NgSwitch</li>
+      </ol>
+    </ul>
+  </div>
+  <ul>
+    <li>NgClass :</li>
+    <p>Can be applied as a string, array and as an object</p>
+    <p [ngClass]="'eg1ForNgClass eg2ForNgClass'">
+      Using string - [ngClass]=&quot;'Class1 Class2'&quot;
+    </p>
+    <p [ngClass]="['eg1ForNgClass', 'eg2ForNgClass']">
+      Using array - [ngClass]=&quot;['Class1','Class2']&quot;
+    </p>
+    <p [ngClass]="{ eg1ForNgClass: true, eg2ForNgClass: true }">
+      Using object - [ngClass]=&quot;{{ "{" }}'Class1':true,'Class2':true{{
+        "}"
+      }}&quot;
+    </p>
+    <li>NgStyle :</li>
+    <p>Can be applied directly and using a method</p>
+    <p [ngStyle]="{ color: 'purple' }">
+      Using inline - [ngStyle]=&quot;{{ "{" }}color:'purple'{{ "}" }}&quot;
+    </p>
+    <p [ngStyle]="apply()">Using method - [ngStyle]=apply()</p>
+    <li>NgModel :</li>
+    <input type="text" placeholder="Type your name" [(ngModel)]="name" />
+    <p>Hello {{ name }}</p>
+    <li>NgIf :</li>
+    <p>Syntax - *ngIf="condition"</p>
+    <p *ngIf="canDisplay">
+      Since the given condition is true, this line is displayed.
+    </p>
+    <li>NgFor</li>
+    <p>Syntax - *ngFor="let item of items"</p>
+    <ol>
+      <li *ngFor="let pet of pets">{{ pet }}</li>
+    </ol>
+    <li>NgSwitch :</li>
+    <p>It uses ngSwitchCase and ngSwitchDefault</p>
+    <p>Choose a subject :</p>
+    <select [(ngModel)]="subject">
+      <option>Biology</option>
+      <option>Mathematics</option>
+      <option>Tamil</option>
+    </select>
+    <ul style="color:darkcyan" [ngSwitch]="subject">
+      <li *ngSwitchCase="'Biology'">You have selected Biology</li>
+      <li *ngSwitchCase="'Mathematics'">You have selected Mathematics</li>
+      <li *ngSwitchCase="'Tamil'">You have selected Tamil</li>
+      <li *ngSwitchDefault>You haven't selected any</li>
+    </ul>
+    <li>Custom directive :</li>
+    <p>Procedure : Generate a directive and import elementRef and inject</p>
+    <p appHighlight>This line uses a custom directive</p>
+  </ul>
+</div>
